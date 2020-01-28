@@ -1,6 +1,8 @@
 import random
 import sys
 import time
+import string
+
 gladivs = "\n \n <:::::::::::::::||===) TEMPVS I (===||:::::::::::::::> \n"
 
 players = ['Alexander', 'Andreas', 'Biarcvs', 'Celeborn',
