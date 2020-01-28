@@ -14,15 +14,18 @@ matchups = [
     f"C: {players[4]} versus {players[5]} \n",
     f"D: {players[6]} versus {players[7]}"]
 
+# a list comprehension method for the above list. Granted, you get a one-liner, but it's not an easy one to read
+matchups2 = [f'{string.ascii_uppercase[int(i/2)]}: {players[i]} versus {players[i+1]} \n' for i in range(len(players) - 1) if i % 2 == 0]
+
 print("\n")
 
-# with open('tornamentvm.txt') as tornamentvm:
-#     contents = tornamentvm.read()
+with open('tornamentvm.txt') as tornamentvm:
+    contents = tornamentvm.read()
 
-# for x in contents:
-#     sys.stdout.write(x)
-#     sys.stdout.flush()
-#     time.sleep(0.2)
+for x in contents:
+    sys.stdout.write(x)
+    sys.stdout.flush()
+    time.sleep(0.2)
 
 print(gladivs)
 
