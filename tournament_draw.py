@@ -16,13 +16,13 @@ matchups = [
 
 print("\n")
 
-with open('tornamentvm.txt') as tornamentvm:
-    contents = tornamentvm.read()
+# with open('tornamentvm.txt') as tornamentvm:
+#     contents = tornamentvm.read()
 
-for x in contents:
-    sys.stdout.write(x)
-    sys.stdout.flush()
-    time.sleep(0.2)
+# for x in contents:
+#     sys.stdout.write(x)
+#     sys.stdout.flush()
+#     time.sleep(0.2)
 
 print(gladivs)
 
@@ -40,14 +40,24 @@ for tempvs in matchups:
 
 time.sleep(1.5)
 
-print(f'''
+# print(f'''
 
-Faction Draft order:
-1. {players[0]}
-2. {players[1]}
-3. {players[2]}
-4. {players[3]}
-5. {players[4]}
-6. {players[5]}
-7. {players[6]}
-8. {players[7]}''')
+# Faction Draft order:
+# 1. {players[0]}
+# 2. {players[1]}
+# 3. {players[2]}
+# 4. {players[3]}
+# 5. {players[4]}
+# 6. {players[5]}
+# 7. {players[6]}
+# 8. {players[7]}''')
+
+
+# a loop based version of the above section - result is exactly the same.
+# the enumerate function is a handy little trick that allows you to get the iteration index
+# (in this case i) along with the actual iterated item (the player)
+print('\n \n Faction Draft order:')
+for i, player in enumerate(players):
+    print(
+        f'{i+1}. {player}'
+    )
